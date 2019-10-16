@@ -1,0 +1,17 @@
+stages:
+- name: compile
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: radar/app:v1
+      registry: a8ree.azurecr.io
+- name: Try add to catalogue
+  steps:
+  - applyAppConfig:
+      catalogTemplate: testaidan
+      version: "1"
+      name: TechRadar
+      targetNamespace: default
+timeout: 60
+notification: {}
