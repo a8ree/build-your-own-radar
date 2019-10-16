@@ -9,7 +9,7 @@ stages:
 - name: Try add to catalogue
   steps:
   - applyAppConfig:
-      catalogTemplate: testaidan
+      catalogTemplate: Radar
       version: "1"
       name: TechRadar
       targetNamespace: default
